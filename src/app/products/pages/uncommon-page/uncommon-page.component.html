@@ -11,18 +11,31 @@
     </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
-    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true"></p-fieldset>
+    <p-fieldset legend="i18nPlural Pipe" [toggleable]="true">
+      <p>
+        Actualmente tenemos {{ clients.length | i18nPlural:clientsMap }}
+      </p>
+      <p-button (click)="deleteClient()" label="Borrar cliente"></p-button>
+    </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
-    <p-fieldset legend="Slice Pipe" [toggleable]="true"></p-fieldset>
+    <p-fieldset legend="Slice Pipe" [toggleable]="true">
+
+    </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
-    <p-fieldset legend="Json Pipe" [toggleable]="true"></p-fieldset>
+    <p-fieldset legend="Json Pipe" [toggleable]="true">
+
+    </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
-    <p-fieldset legend="KeyValue Pipe" [toggleable]="true"></p-fieldset>
+    <p-fieldset legend="KeyValue Pipe" [toggleable]="true">
+
+    </p-fieldset>
   </div>
   <div class="col-12 md:col-6">
-    <p-fieldset legend="Async Pipe" [toggleable]="true"></p-fieldset>
+    <p-fieldset legend="Async Pipe" [toggleable]="true">
+
+    </p-fieldset>
   </div>
 </div>
