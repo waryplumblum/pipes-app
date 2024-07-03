@@ -5,6 +5,11 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build:href": "ng build --base-href ./",
+    "delete:docs": "rmdir /s /q docs",
+    "copy:dist": "robocopy dist\\pipes-app\\browser docs /e",
+    "build:github-1": "npm run build:href && npm run copy:dist",
+    "build:github-2": "npm run delete:docs && npm run build:href && npm run copy:dist",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
