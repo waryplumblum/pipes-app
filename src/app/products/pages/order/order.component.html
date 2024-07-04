@@ -8,16 +8,16 @@
     <p-button label="ToogleCase" icon="pi pi-search" (click)="toogleUpperCase()"></p-button>
   </div>
   <div class="p-toolbar-group-end">
-      <p-button label="Por nombre" icon="pi pi-sort" class="mr-2" styleClass="p-button-success"></p-button>
-      <p-button label="Por volar"  icon="pi pi-sort" class="mr-2" styleClass="p-button-danger"></p-button>
-      <p-button label="Por color"  icon="pi pi-sort" class="mr-2" styleClass="p-button-help"></p-button>
+      <p-button label="Por nombre" (onClick)="changeOrder('name')" icon="pi pi-sort" class="mr-2" styleClass="p-button-success"></p-button>
+      <p-button label="Por volar"  (onClick)="changeOrder('canFly')" icon="pi pi-sort" class="mr-2" styleClass="p-button-danger"></p-button>
+      <p-button label="Por color"  (onClick)="changeOrder('color')" icon="pi pi-sort" class="mr-2" styleClass="p-button-help"></p-button>
   </div>
 </p-toolbar>
 
 <div class="grid">
   <div class="col mt-2">
     <p-panel header="Héroes">
-      <p-table [value]="heroes | sortBy:'canFly'" [tableStyle]="{ 'min-width': '50rem' }">
+      <p-table [value]="heroes | sortBy:orderBy" [tableStyle]="{ 'min-width': '50rem' }">
         <ng-template pTemplate="header">
           <tr>
             <th>Nombre</th>
